@@ -16,7 +16,7 @@ html {
 *,
 *::before,
 *::after {
-  border: .1px solid rgb(245, 219, 222); /**/
+  /*border: .1px solid rgb(245, 219, 222); */
   box-sizing: border-box;
 }
 
@@ -42,6 +42,7 @@ li {
 a,
 a:hover,
 a:focus {
+  color: #37474F;
   text-decoration: none;
 }
 
@@ -74,6 +75,7 @@ button[disabled] {
 
 input {
   padding: 0;
+  border: none;
 }
 
 input:required {

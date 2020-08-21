@@ -1,10 +1,12 @@
 @import 'reset';
 
+$main-white: #EEF0F2;
 $main-black: #141414;
 $dark-gray:#212121;
 $main-yellow: #eec643;
 $blue-gray: #37474F;
 
 #app {
+  width: 100%;
   color: $blue-gray;
 }
