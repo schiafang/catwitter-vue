@@ -40,18 +40,8 @@ const routes = [
   },
   {
     path: '/users/:id/tweets',
-    name: 'UserTweets',
-    component: () => import('../views/UserTweets.vue')
-  },
-  {
-    path: '/users/:id/replies',
-    name: 'UserReplies',
-    component: () => import('../views/UserReplies.vue')
-  },
-  {
-    path: '/users/:id/likes',
-    name: 'UserLikes',
-    component: () => import('../views/UserLikes.vue')
+    name: 'UserPages',
+    component: () => import('../views/UserPages.vue')
   },
   {
     path: '/users/:id/followings',
@@ -68,8 +58,6 @@ const routes = [
     name: 'EditUser',
     component: () => import('../views/EditUser.vue')
   },
-
-
   {
     path: '*',
     name: 'NotFound',
