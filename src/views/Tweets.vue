@@ -56,16 +56,9 @@ export default {
   flex-direction: column;
 }
 
-.main-container-title {
-  height: 50px;
-  border-bottom: 1px solid #dedede;
-
-  span {
-    padding-left: 20px;
-    line-height: 50px;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
+.main-container-title span {
+  padding-left: 20px;
+  line-height: 50px;
 }
 
 .tweet-text-block {

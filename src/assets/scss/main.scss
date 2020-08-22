@@ -12,6 +12,15 @@
   border-radius: 50%;
 }
 
+.main-container-title {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid $border;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 
 .container {
   display: grid;
