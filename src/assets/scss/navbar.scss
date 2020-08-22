@@ -18,11 +18,15 @@
 .nav-item {
   padding-top: 15px;
   height: 70px;
-  background-color: #eec643;
+  background-color: #EEF0F2;
   text-align: center;
+  
   .icon-div {
     color: #3f3f3f;
     font-size: 25px;
+    &:hover {
+    color: #eec643;
+  }
   }
   span {
     display: none;
@@ -44,7 +48,7 @@
 }
 
 
-@media screen and (min-width: 568px) {
+@media screen and (min-width: 768px) {
   .navbar,.tweet-button,.nav-item,.nav-list {
     all: unset;
   }
@@ -84,14 +88,12 @@
 
   .nav-item {
     margin-bottom: 34px;
-
     .icon-div {
       font-size: 1.2rem;
       width: 40px;
     }
     span {
       display: inline;
-      color: #141414;
     }
     a {
       display: flex;
@@ -99,12 +101,14 @@
       font-weight: bold;
       font-size: 18px;
       line-height: 26px;
-      color: #1c1c1c;
       &:hover {
-        color: #ebbd25;
+        width: 600px;
+        filter: drop-shadow(#eec643 330px 0);
+        transform: translateX(-330px);
       }
       &.disabled-link:hover {
-        color: #141414;
+        filter: drop-shadow(#37474F 330px 0);
+        transform: translateX(-330px);
         cursor: default;
       }
     }
@@ -124,9 +128,4 @@
     border: none;
     color: #212121;
   }
-}
-
-@media screen and (min-width: 1024px) {
-
-
 }

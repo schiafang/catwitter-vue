@@ -15,7 +15,7 @@
         </router-link>
       </div>
 
-      <div class="nav-item">
+      <!-- <div class="nav-item">
         <router-link to="null" class="disabled-link">
           <div class="icon-div">
             <i class="fas fa-bell"></i>
@@ -44,28 +44,28 @@
             私人訊息
           </span>
         </a>
-      </div>
+      </div> -->
 
       <div class="nav-item">
-        <a href="/users/tweets">
+        <router-link to="/users/:id/tweets">
           <div class="icon-div">
             <i class="fas fa-paw"></i>
           </div>
           <span>
             個人頁面
           </span>
-        </a>
+        </router-link>
       </div>
 
       <div class="nav-item">
-        <a href="/users/edit">
+        <router-link to="/users/:id/edit">
           <div class="icon-div">
             <i class="fas fa-cog"></i>
           </div>
           <span>
             設定
           </span>
-        </a>
+        </router-link>
       </div>
 
       <button
@@ -78,7 +78,7 @@
       </button>
 
       <div class="nav-item logout">
-        <a href="/logout">
+        <router-link to="/logout">
           <div class="icon-div">
             <!-- <i class="fas fa-campground"></i> -->
             <i class="fas fa-sign-out-alt"></i>
@@ -86,7 +86,7 @@
           <span>
             登出
           </span>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
