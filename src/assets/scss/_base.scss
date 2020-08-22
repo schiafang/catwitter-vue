@@ -1,0 +1,63 @@
+$main-yellow: #eec643;
+$main-yellow-light: rgba(238,198,67,.1);
+$main-black: rgb(20, 20, 20);
+$main-white: #EEF0F2;
+$light-black: #212121;
+$blue-gray: #37474F;
+$dark-gray:#3f3f3f;
+$light-gray: #D2D2D2;
+$pink: #E1645A;
+$border: #dedede;
+$account-gray: #828282;
+
+%flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin boxshadow($value) {
+   -webkit-box-shadow:$value;
+    -moz-box-shadow:$value;
+    box-shadow:$value;
+}
+
+@mixin followBtn {
+  width: 92px;
+  font-size: 15px;
+  height: 2rem;
+  border: 1px solid $main-yellow;
+  border-radius: 100px;
+  color: $main-yellow;
+  background-color: transparent;
+  font-weight: bold;;
+}
+
+@mixin unfollowBtn {
+  width: 92px;
+  height: 2rem;
+  font-size: 15px;
+  background: $main-yellow;
+  border: 1px solid $main-yellow;
+  border-radius: 100px;
+  color: $main-white;
+  font-weight: bold;
+}
+
+@mixin tweetButton {
+  text-align: center;
+  max-width: 180px;
+  height: 45px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: $main-yellow;
+  border-radius: 100px;
+  border: none;
+  color: $main-white;
+}

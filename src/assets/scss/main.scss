@@ -1,12 +1,54 @@
-@import 'reset';
-
-$main-white: #EEF0F2;
-$main-black: #141414;
-$dark-gray:#212121;
-$main-yellow: #eec643;
-$blue-gray: #37474F;
+@import 'reset', 'base';
 
 #app {
   width: 100%;
   color: $blue-gray;
+}
+
+/*共用元素*/
+.avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto 70px;
+  grid-template-areas: 'top' 'main' 'navbar';
+}
+
+.navbar {
+  grid-area: navbar;
+  position: fixed;
+}
+
+.main-container {
+  grid-area: main;
+  overflow-y: scroll;
+}
+
+.right-container {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    height: 100vh;
+    grid-auto-columns: 300px minmax(450px, 1fr).5fr;
+    grid-template-areas: 'navbar main top';
+    overflow: scroll;
+  }
+  
+  .right-container {
+    display: block;
+    grid-area: top;
+    margin-right: 30px;
+  }
+  
+  .main-container {
+    min-width: 400px;
+    border-right: 1px solid $border;
+  }
 }

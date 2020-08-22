@@ -95,3 +95,15 @@ input:invalid {
 .cursor-pointer {
   cursor: pointer;
 }
+
+textarea {
+  font-family: "Noto Sans TC", sans-serif; 
+  font-size: 1.2rem;
+  color: #3f3f3f;
+}
+
+::placeholder {
+  font-family: "Noto Sans TC", sans-serif; 
+  font-size: 1.2rem;
+  color: #D2D2D2;
+}

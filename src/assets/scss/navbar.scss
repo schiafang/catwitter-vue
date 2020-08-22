@@ -1,3 +1,5 @@
+@import 'base';
+
 .navbar {
   margin-top: calc(100vh - 70px);
   width: 100%;
@@ -18,14 +20,14 @@
 .nav-item {
   padding-top: 15px;
   height: 70px;
-  background-color: #EEF0F2;
+  background-color: $main-white;
   text-align: center;
   
   .icon-div {
-    color: #3f3f3f;
+    color: $dark-gray;
     font-size: 25px;
     &:hover {
-    color: #eec643;
+    color: $main-yellow;
   }
   }
   span {
@@ -40,27 +42,25 @@
   width: 60px;
   height: 60px;
   font-size: 1rem;
-  background: #eec643;
+  background: $main-yellow;
   opacity: .4;
   border-radius: 100px;
   border: none;
-  color: #212121;
+  color: $light-black;
 }
-
 
 @media screen and (min-width: 768px) {
   .navbar,.tweet-button,.nav-item,.nav-list {
     all: unset;
   }
+
   .navbar {
-    width: 200px;
+    width: 180px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 0 50px 0 70px;
-    -webkit-box-shadow: 1px 0px 15px 4px rgba(180, 180, 180, 0.1);
-    -moz-box-shadow: 1px 0px 15px 4px rgba(180, 180, 180, 0.1);
-    box-shadow: 1px 0px 15px 4px rgba(180, 180, 180, 0.1);
+    @include boxshadow(1px 0px 15px 4px rgba(180, 180, 180, 0.1)); 
   }
 
   .logo {
@@ -69,9 +69,10 @@
     margin-top: 35px;
 
     img {
-      box-shadow: 2px 2px 10px 3px rgba(180, 180, 180, 1);
+      @include boxshadow(2px 2px 10px 3px rgba(180, 180, 180, 1));
       border-radius: 50%;
     }
+
     span {
       margin-left: 10px;
       font-weight: 600;
@@ -88,44 +89,42 @@
 
   .nav-item {
     margin-bottom: 34px;
+
     .icon-div {
       font-size: 1.2rem;
       width: 40px;
     }
+
     span {
       display: inline;
     }
+
     a {
       display: flex;
       align-items: center;
       font-weight: bold;
       font-size: 18px;
       line-height: 26px;
+
       &:hover {
         width: 600px;
         filter: drop-shadow(#eec643 330px 0);
         transform: translateX(-330px);
       }
+
       &.disabled-link:hover {
         filter: drop-shadow(#37474F 330px 0);
         transform: translateX(-330px);
         cursor: default;
       }
     }
+    
     &.logout {
       margin-top: 100px;
     }
   }
 
   .tweet-button {
-    text-align: center;
-    width: 180px;
-    height: 45px;
-    font-size: 1rem;
-    font-weight: 600;
-    background: #eec643;
-    border-radius: 100px;
-    border: none;
-    color: #212121;
+    @include tweetButton;
   }
 }

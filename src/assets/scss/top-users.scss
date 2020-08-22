@@ -1,0 +1,89 @@
+@import 'base';
+
+@media screen and (min-width: 768px) {
+
+.top-users-container {
+   @include boxshadow(5px 3px 10px 1px rgba(180, 180, 180, 0.3)); 
+  margin: 50px 0 0 15px;
+  width: 300px;
+  border-radius: 8px;
+  background: $main-yellow-light;
+}
+
+.top-users-title {
+  height: 45px;
+  padding: 10px 0px 0px 15px;
+  font-weight: 900;
+  font-size: 1rem;
+  border-bottom: 1px solid $main-white;
+}
+
+.top-users-panel {
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.users-item {
+  display: grid;
+  height: 65px;
+  align-items: center;
+  grid-template-columns: 60px 140px 100px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "avatar account btn"
+  "avatar name btn";
+  border: 1px solid $main-white;
+
+  .users-item-avatar {
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    grid-area: avatar;
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .users-item-name {
+    font-size: .9rem;
+    width: 120px;
+    overflow: hidden;
+    grid-area: name;
+    font-weight: bolder;
+  }
+
+  .users-item-account {
+    font-size: .9rem;
+    width: 120px;
+    overflow: hidden;
+    grid-area: account;
+    color: $account-gray;
+  }
+  
+  .users-item-button {
+    float: right;
+    grid-area: btn;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
+
+  .follow-button {
+    @include followBtn;
+  }
+
+  .unfollow-button {
+    @include unfollowBtn;
+  }
+}
+
+.more-users {
+  height: 45px;
+  font-size: 15px;
+  color: $main-yellow;
+  font-weight: 500;
+  padding-left: 20px;
+  text-align: left;
+}
+}
