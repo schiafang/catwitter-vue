@@ -1,0 +1,67 @@
+@import 'base';
+
+.tweet-card {
+  width: 100%;
+  min-height: 150px;
+  border-bottom: 1px solid $border;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  grid-template-rows: 30px 1fr 60px;
+  grid-template-areas:
+    'avatar name'
+    'avatar text'
+    'avatar footer';
+
+  &:hover {
+    background: #f8f8f8;
+  }
+
+  .avatar {
+    padding: 5px 0 0 15px;
+    grid-area: avatar;
+  }
+
+  .account-name {
+    display: flex;
+    align-items: center;
+    grid-area: name;
+
+    .name {
+      font-weight: 600;
+    }
+    .account {
+      margin-left: 5px;
+      color: $account-gray;
+    }
+  }
+
+  .text {
+    padding: 5px 20px 0 0;
+    grid-area: text;
+  }
+
+  .tweet-card-footer {
+    display: flex;
+    align-items: center;
+    grid-area: footer;
+    color: rgb(150, 150, 150);
+
+    .reply,
+    .like {
+      width: 100px;
+      button {
+        color: rgb(150, 150, 150);
+        font-size: 1.2rem;
+        width: 30px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .like {
+      padding-top: 1px;
+    }
+  }
+}
