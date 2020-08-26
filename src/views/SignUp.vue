@@ -1,20 +1,27 @@
 <template>
-  <div class="container">
-    <div class="sign-container">
-      <div class="sign-form-container sign-up-container">
+  <div class="container-w">
+    <div class="sign-container sign-up-container">
+      <div class="sign-title sign-up-title">
+        <h2 class="title">SIGN UP</h2>
+      </div>
+
+      <div class="sign-form-container sign-up-form">
         <form @submit.stop.prevent="getSubmit">
-          <div class="sign-form">
-            <label for="account" class="sign-account">帳號</label>
+          <div class="sign-up-form">
+            <label for="account" class="sign-account"
+              >帳號
+              <div class="sign-account-after"></div
+            ></label>
             <input
               type="text"
               id="account"
-              class="account"
+              class="account sign-up-account"
               name="account"
               placeholder="請輸入帳號"
               v-model="account"
               required
             />
-            <label for="account" class="sign-account">電子信箱</label>
+            <label for="account" class="sign-email">電子信箱</label>
             <input
               type="email"
               id="email"
@@ -49,14 +56,12 @@
           </div>
         </form>
       </div>
+
       <router-link to="/signin">
         <div class="sign-footer">
           <h3>SIGN IN</h3>
         </div>
       </router-link>
-      <div class="sign-title sign-up-title">
-        <div class="title">註冊 caTwitter</div>
-      </div>
     </div>
   </div>
 </template>
@@ -80,7 +85,7 @@ export default {
         passwordCheck: this.passwordCheck
       })
 
-      console.log('data', data)
+      console.log('data', data) //取得資料傳送到後端
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-w">
     <div class="sign-container">
       <div class="sign-title">
         <img src="../assets/images/logo.svg" alt="" />
@@ -10,7 +10,7 @@
         <h2>SIGN IN</h2>
 
         <form @submit.stop.prevent="getSubmit">
-          <div class="sign-form">
+          <div class="sign-in-form">
             <label for="account" class="sign-account">帳號</label>
             <input
               type="text"
@@ -35,7 +35,7 @@
             <button class="sign-button" type="submit">登入</button>
           </div>
         </form>
-        <router-link to="/admin/signin" class="signin-link"
+        <router-link to="/admin/signin" class="sign-in-link"
           >管理員登入 <i class="fas fa-caret-right"></i
         ></router-link>
       </div>
@@ -62,8 +62,7 @@ export default {
         account: this.account,
         password: this.password
       })
-
-      console.log('data', data)
+      console.log('data', data)  //取得資料傳送到後端
     }
   }
 }

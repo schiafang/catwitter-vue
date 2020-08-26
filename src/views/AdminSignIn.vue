@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
+  <div class="container-w">
     <div class="sign-container">
       <div class="sign-title">
         <h2 class="admin-sign-title">後台登入</h2>
       </div>
       <div class="sign-form-container">
         <form @submit.stop.prevent="getSubmit">
-          <div class="sign-form admin-sign-form">
+          <div class="sign-in-form admin-sign-form">
             <label for="account" class="sign-account">帳號</label>
             <input
               type="text"
@@ -31,7 +31,7 @@
             <button class="sign-button" type="submit">登入</button>
           </div>
         </form>
-        <router-link to="/signin" class="signin-link"
+        <router-link to="/signin" class="sign-in-link"
           ><i class="fas fa-caret-left"></i> 一般使用者登入</router-link
         >
       </div>
