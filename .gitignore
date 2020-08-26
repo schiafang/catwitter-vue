@@ -2,6 +2,9 @@
 node_modules
 /dist
 
+# dummydatas for test
+src/assets/dummydatas
+
 
 # local env files
 .env.local

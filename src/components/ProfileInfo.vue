@@ -10,31 +10,27 @@
       </div>
     </div>
     <div class="profile-info-container">
-      hello
+      <div class="profile-cover">
+        <img src="../assets/images/cover.png" alt="" />
+      </div>
+      <div class="profile-avatar">
+        <img src="../assets/images/test.png" alt="" />
+      </div>
+      <div class="profile-info">
+        <div class="name">Bob</div>
+        <div class="account">@spongebob</div>
+        <div class="decription">What's happening?</div>
+        <div class="other-info">Joined Faburery 27</div>
+        <div class="follow-count">
+          <span>140 Followings</span>
+          <span>140 Followers</span>
+        </div>
+        <div class="followed-by">followed by</div>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/scss/base';
-
-.main-container-title {
-  .back {
-    line-height: 50px;
-    margin: 0 20px;
-    font-size: 1.2rem;
-    color: $main-yellow;
-  }
-  .title {
-    p {
-      font-size: 0.9rem;
-      color: $account-gray;
-    }
-  }
-}
-.profile-info-container {
-  width: 100%;
-  height: 400px;
-  background: rgb(211, 209, 205);
-}
+@import '../assets/scss/profile-info';
 </style>
