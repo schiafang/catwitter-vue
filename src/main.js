@@ -5,6 +5,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.config.productionTip = false
+ElementUI.Dialog.props.destroyOnClose = true
 Vue.use(ElementUI)
 
 new Vue({
