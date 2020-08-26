@@ -12,6 +12,11 @@
   border-radius: 50%;
 }
 
+.account {
+  color: $account-gray;
+  font-size: .9rem;
+}
+
 .main-container-title {
   display: flex;
   align-items: center;
@@ -21,16 +26,11 @@
   font-weight: 500;
 }
 
-
-.container {
+.container-w {
   display: grid;
-  grid-template-rows: auto auto 70px;
-  grid-template-areas: 'top' 'main' 'navbar';
-}
-
-.navbar {
-  grid-area: navbar;
-  position: fixed;
+  height: 100vh;
+  grid-template-rows:  1fr 60px;
+  grid-template-areas: 'main' 'navbar';
 }
 
 .main-container {
@@ -42,8 +42,9 @@
   display: none;
 }
 
+
 @media screen and (min-width: 768px) {
-  .container {
+  .container-w {
     height: 100vh;
     grid-auto-columns: 300px minmax(450px, 1fr).5fr;
     grid-template-areas: 'navbar main top';
